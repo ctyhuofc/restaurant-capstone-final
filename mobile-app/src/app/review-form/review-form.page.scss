@@ -1,0 +1,39 @@
+ion-content{
+
+  --ion-background-color: white;
+  --ion-text-color: black
+}
+
+ion-select{
+
+  --ion-background-color: white;
+  --ion-text-color: white
+}
+
+ion-select-option{
+
+  --ion-background-color: white;
+  --ion-text-color: white
+}
+
+
+.select-interface-option {
+  color: white;
+}
+
+.my-custom-interface .select-interface-option {
+  color: white;
+}
+
+.my-custom-interface .select-interface-option {
+  --color: white;
+  --color-hover: white;
+}
+
+.popover-title{
+  background: white;
+}
+
+.popover-content{
+  background: white
+}

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contact-us</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="addFeedbackForm">
+    <ion-item>
+      <ion-label position="floating">Full Name</ion-label>
+      <ion-textarea formControlName="full_name"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-textarea formControlName="email"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Comment</ion-label>
+      <ion-textarea formControlName="comment"></ion-textarea>
+    </ion-item>
+    <ion-button (click)="addFeedback()">Submit</ion-button>
+  </form>
+</ion-content>

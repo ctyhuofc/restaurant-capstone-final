@@ -1,0 +1,36 @@
+<app-employee-homepage></app-employee-homepage>
+<div class="list-group" *ngFor="let contact_info of contact_infos">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Visit or Write to Us:</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1">{{contact_info.address}}</p>
+    <small>We'd love to hear From You</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Call Us</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">{{contact_info.phone_number}}</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+  <a href="mailto:{{contact_info.email}}?&subject=Lancelet Customer Question Or Feedback" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Email Us</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+  <a href="contact-us-form" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Fill out our Contact Form</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+  <a routerLink="/employees/updatecontact/{{contact_info.id}}" class="btn btn-primary">Update Contact Info</a>
+</div>

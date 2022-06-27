@@ -1,0 +1,77 @@
+<app-employee-homepage></app-employee-homepage>
+<div container style="background-color: #F3EFF5">
+<form [formGroup]="addItemForm">
+
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class ="form-control" placeholder="Enter Item Name" formControlName="name" id="name">
+  </div>
+
+  <div class="alert alert-danger" *ngIf="name?.invalid && name?.touched">
+    <div *ngIf="name?.errors?.['required']">A Name is Required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input type="text" class="form-control" placeholder="Enter the description" formControlName="description" id="description">
+  </div>
+
+  <div class="alert alert-danger" *ngIf="description?.invalid && description?.touched">
+    <div *ngIf="description?.errors?.['required']">A Description is Required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="item_type">Item Type</label>
+    <select formControlName="item_type">
+      <option value='food'>Food</option>
+      <option value='drink'>Drink</option>
+      <option value='offer'>Offer</option>
+    </select>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="item_type?.invalid && item_type?.touched">
+    <div *ngIf="item_type?.errors?.['required']">Item Type is Required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="item_subtype">Item Subtype</label>
+    <select formControlName="item_subtype">
+      <option value='burger'>Burger</option>
+      <option value='pasta'>Pasta</option>
+      <option value='pizza'>Pizza</option>
+      <option value='soft drink'>Soft Drink</option>
+      <option value='beer'>Beer</option>
+      <option value='wine'>Wine</option>
+      <option value='bundle'>Bundle</option>
+    </select>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="item_subtype?.invalid && item_subtype?.touched">
+    <div *ngIf="item_subtype?.errors?.['required']">Item SubType is Required</div>
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="photo_file">Photo File:</label>
+    <input type="file" class="form-control" (change)="onFileChange($event)" accept="image/*">
+  </div>
+
+  <div class="alert alert-danger" *ngIf="photo_file?.invalid && photo_file?.touched">
+    <div *ngIf="photo_file?.errors?.['required']">Photo is Required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="text" class ="form-control" placeholder="Enter Price" formControlName="price" id="price">
+  </div>
+
+  <div class="alert alert-danger" *ngIf="price?.invalid && price?.touched">
+    <div *ngIf="price?.errors?.['required']">Price is Required</div>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary" (click)="add_item()" [disabled]="addItemForm.invalid">Submit</button>
+
+</form>
+</div>

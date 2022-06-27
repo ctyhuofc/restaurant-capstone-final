@@ -1,0 +1,21 @@
+<app-employee-homepage></app-employee-homepage>
+<div *ngFor = "let aboutus of about_us">
+
+
+  <div class="card mb-3">
+    <img src="http://localhost:3000/images/{{aboutus.photo_file}}" class="card-img-top" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Our History</h5>
+      <p class="card-text">{{aboutus.our_history}}</p>
+      <h5 class="card-title">What We Believe</h5>
+      <p class="card-text">{{aboutus.what_we_believe}}</p>
+      <h5 class="card-title">Our Commitment To Our Customers</h5>
+      <p class="card-text">{{aboutus.our_commit}}</p>
+      <a routerLink="/employees/updateabout-us/{{aboutus.id}}" class="btn btn-primary">Update About Us Info</a>
+
+    </div>
+
+  </div>
+
+</div>
+

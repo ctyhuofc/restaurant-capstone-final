@@ -1,0 +1,27 @@
+<!--<div class="card">-->
+<!--  <div class="card-header bg-success text-white">-->
+
+<!--    <h4 class="card-title">{{ item.photo_file }}</h4>-->
+<!--  </div>-->
+
+<!--  <div class="card-body bg-primary text-white">-->
+<!--    <p>{{item.description}}</p>-->
+<!--    <hr>-->
+<!--    <p>{{item.item_type}}</p>-->
+<!--    <hr>-->
+<!--    <p>{{item.price}}</p>-->
+<!--    <hr>-->
+<!--  </div>-->
+<div *ngIf="item.item_subtype =='burger'">
+  Burger
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{item.photo_file}}</h5>
+      <small>${{item.price}}</small>
+    </div>
+    <p class="mb-1">{{item.name}}</p>
+    <small>{{item.description}}</small>
+  </a>
+</div>
+</div>

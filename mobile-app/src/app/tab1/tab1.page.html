@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     <img src="https://restaurant-capstone6263.herokuapp.com/images/Nav-photo/L-logo.webp" class="logo" width='10%' height="auto">Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-slides
+    [pager]="true"
+    [scrollbar]="true"
+    [options]="options"
+
+    (ionSlideWillChange)="slideWillChange()"
+    (ionSlideDidChange)="slideDidChange()"
+
+    #slidesRef
+  >
+    <ion-slide>    <img src="https://restaurant-capstone6263.herokuapp.com/images/breakfast-bowl-banner.jpeg" /></ion-slide>
+    <ion-slide><img src="https://restaurant-capstone6263.herokuapp.com/images/outdoor-meal-banner.jpeg" /></ion-slide>
+    <ion-slide><img src="https://restaurant-capstone6263.herokuapp.com/images/pancakes.jpeg" /></ion-slide>
+  </ion-slides>
+
+  <ion-card-title class="title">WELCOME TO THE LANCELET</ion-card-title>
+  <ion-card-content class="title">
+ <h2>Where Food and Friends Connect</h2>
+  </ion-card-content>
+
+  <ion-card-content (click)="gotoFood()">
+    <img src="https://restaurant-capstone6263.herokuapp.com/images/taco-banner.jpeg" />
+    <ion-card-header>
+      <ion-card-title>Food Menu</ion-card-title>
+    </ion-card-header>
+    Our Delicious Food Menu
+    </ion-card-content>
+  <ion-card-content (click)="gotoDrinks()">
+    <img src="https://restaurant-capstone6263.herokuapp.com/images/ice-coffee-banner.jpeg" />
+    <ion-card-header>
+      <ion-card-title>Drink Menu</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+Drinks Drink Drinks
+    </ion-card-content>
+  </ion-card-content>
+
+  <ion-card-content (click)="gotoOffers()">
+    <img src="https://restaurant-capstone6263.herokuapp.com/images/naan.jpeg" />
+    <ion-card-header>
+      <ion-card-title>Offers</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+Bang for your buck!
+    </ion-card-content>
+  </ion-card-content>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>More</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen class="test">
+    <ion-list-header class="test" lines="full" (click)="gotoReviews()">
+      <ion-label class="test" (click)="gotoReviews()"> Read Reviews </ion-label>
+    </ion-list-header>
+    <ion-list lines="full" class="ion-no-margin">
+      <ion-list-header class="test" lines="full">
+        <ion-label class="test" (click)="gotoReviewForm()"> Leave a Review </ion-label>
+      </ion-list-header>
+    </ion-list>
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-list-header class="test" lines="full">
+      <ion-label class="test" (click)="gotoContactForm()"> Contact Us Via Form </ion-label>
+    </ion-list-header>
+  </ion-list>
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-list-header class="test" lines="full">
+      <ion-label class="test" (click)="openEmail()"> Contact Us Via Email </ion-label>
+    </ion-list-header>
+  </ion-list>
+</ion-content>

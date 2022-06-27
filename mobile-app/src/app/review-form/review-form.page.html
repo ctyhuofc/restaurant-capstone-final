@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="BACK" icon="add">Back</ion-back-button>
+    </ion-buttons>
+    <ion-title>review-form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="addReviewForm">
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input formControlName="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-textarea formControlName="email"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Item</ion-label>
+    <ion-input type="text" formControlName="item"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Review</ion-label>
+    <ion-input type="textarea" formControlName="review"></ion-input>
+  </ion-item>
+  <ion-item style="--ion-background-color: #F3EFF5">
+    <ion-label>Rating</ion-label>
+    <ion-select formControlName="rating" placeholder="Select One" style="background-color: orange" class="my-custom-interface">
+      <ion-select-option value="1" class="popover-content" >1 Star</ion-select-option>
+      <ion-select-option value="2" class="popover-content">2 Stars</ion-select-option>
+      <ion-select-option value="3" class="popover-content">3 Stars</ion-select-option>
+      <ion-select-option value="4" class="popover-content">4 Stars</ion-select-option>
+      <ion-select-option value="4" class="popover-content">5 Stars</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-button (click)="add_review()">Submit</ion-button>
+  </form>
+</ion-content>

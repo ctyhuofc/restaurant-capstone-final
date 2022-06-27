@@ -1,0 +1,47 @@
+<ion-header [translucent]="true" xmlns="http://www.w3.org/1999/html">
+  <ion-toolbar>
+    <ion-title>
+      Drinks
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br>
+  <ion-card-title style="text-align: center">Beer</ion-card-title>
+  <div *ngFor="let item of items">
+    <div *ngIf="item.item_type =='drink'">
+      <div *ngIf="item.item_subtype =='beer'">
+        <!--      <ion-card>-->
+        <img src="https://restaurant-capstone6263.herokuapp.com/images/{{item.photo_file}}" />
+        <ion-card-header>
+          <ion-card-subtitle>${{item.price}}</ion-card-subtitle>
+          <ion-card-title>{{item.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{item.description}}
+        </ion-card-content>
+        <!--        </ion-card>-->
+      </div>
+    </div>
+  </div>
+
+  <ion-card-title style="text-align: center">Wine</ion-card-title>
+  <div *ngFor="let item of items">
+    <div *ngIf="item.item_type =='drink'">
+      <div *ngIf="item.item_subtype =='wine'">
+        <ion-card>
+          <img src="https://restaurant-capstone6263.herokuapp.com/images/{{item.photo_file}}" />
+          <ion-card-header>
+            <ion-card-subtitle>${{item.price}}</ion-card-subtitle>
+            <ion-card-title>{{item.name}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{item.description}}
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+

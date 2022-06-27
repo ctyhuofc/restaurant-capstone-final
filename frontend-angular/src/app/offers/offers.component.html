@@ -1,0 +1,25 @@
+<div class="container py-4">
+
+<h5>Offers</h5>
+<div *ngFor="let item of items">
+  <div *ngIf="item.item_type =='offer'">
+    <div class="card border-light mb-3" style="max-width: 1200px; background-color: #0C0600">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="http://localhost:3000/images/{{item.photo_file}}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">{{item.description}}</p>
+              <p class="card-text">${{item.price}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+

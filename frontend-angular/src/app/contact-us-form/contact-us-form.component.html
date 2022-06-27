@@ -1,0 +1,50 @@
+<div class="container-fluid px-1 py-5 mx-auto" style="background-color: #0C0600">
+  <div class="row d-flex justify-content-center">
+    <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+      <h1>Contact The Lancelet</h1>
+      <p class="pink-text">Whether your experience was stellar, or less than perfect, we'd love to hear from you</p>
+      <div class="card" style="background-color: #F3EFF5">
+        <h5 class="text-center mb-4"></h5>
+        <form class="form-card" [formGroup]="addContactForm" style="background-color: #F3EFF5">
+          <div class="row justify-content-between text-left">
+            <div class="mb-3">
+
+              <div *ngIf="alert" class="alert alert-warning alert-dismissible fade show" role="alert" style="background-color: #F5FF90">
+                <strong>Thank you for your feedback!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+      <div class="form-group">
+        <label for="full_name">Your Full Name:</label>
+        <input type="text" class ="form-control" placeholder="Enter Your Name" formControlName="full_name" id="full_name">
+      </div>
+
+      <div class="alert alert-danger" *ngIf="full_name?.invalid && full_name?.touched">
+        <div *ngIf="full_name?.errors?.['required']">Your Name is Required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="text" class="form-control" placeholder="Enter the email" formControlName="email" id="email">
+      </div>
+
+      <div class="alert alert-danger" *ngIf="email?.invalid && email?.touched">
+        <div *ngIf="email?.errors?.['required']">email is Required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="comment">Your Feedback/Question/Concern/Comment:</label>
+        <input type="textarea" class ="form-control" placeholder="Enter Your Question Concern Or Comment" formControlName="comment" id="comment">
+      </div>
+
+      <div class="alert alert-danger" *ngIf="comment?.invalid && comment?.touched">
+        <div *ngIf="comment?.errors?.['required']">Feedback is required</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" (click)="add_contact()" [disabled]="addContactForm.invalid">Submit</button>
+    </div>
+          </div>
+  </form>
+      </div>
+    </div>
+  </div>
+</div>

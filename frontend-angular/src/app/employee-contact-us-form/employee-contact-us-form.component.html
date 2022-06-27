@@ -1,0 +1,38 @@
+<app-employee-homepage></app-employee-homepage>
+<div container style="background-color: #F3EFF5" mx-auto class="d-flex p-6">
+  <form [formGroup]="updateContactInfo">
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="address">address:</label>
+        <input type="text" class ="form-control" placeholder="Enter Your address" formControlName="address" id="address">
+      </div>
+
+      <div class="form-group">
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" class ="form-control" placeholder="Enter Your ohne number" formControlName="phone_number" id="phone_number">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class ="form-control" placeholder="Enter Your address" formControlName="email" id="email">
+      </div>
+
+      <div class="alert alert-danger" *ngIf="address?.invalid && address?.touched">
+        <div *ngIf="address?.errors?.['required']">Your address is Required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Hours:</label>
+        <input type="text" class ="form-control" placeholder="Enter Your address" formControlName="hours" id="hours">
+      </div>
+
+      <div class="alert alert-danger" *ngIf="hours?.invalid && hours?.touched">
+        <div *ngIf="hours?.errors?.['required']">Hours Are Required</div>
+      </div>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary" (click)="updateContact()">Update</button>
+  </form>
+</div>

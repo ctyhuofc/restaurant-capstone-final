@@ -1,0 +1,29 @@
+<ion-header [translucent]="true" xmlns="http://www.w3.org/1999/html">
+  <ion-toolbar>
+    <ion-title>
+      Offers
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br>
+  <ion-card-title style="text-align: center">Offers</ion-card-title>
+  <div *ngFor="let item of items">
+    <div *ngIf="item.item_type =='offer'">
+        <!--      <ion-card>-->
+        <img src="https://restaurant-capstone6263.herokuapp.com/images/{{item.photo_file}}" />
+        <ion-card-header>
+          <ion-card-subtitle>${{item.price}}</ion-card-subtitle>
+          <ion-card-title>{{item.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{item.description}}
+        </ion-card-content>
+        <!--        </ion-card>-->
+      </div>
+    </div>
+
+
+</ion-content>
+
+

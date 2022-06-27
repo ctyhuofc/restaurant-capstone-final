@@ -1,0 +1,53 @@
+
+  <div class="container py-4">
+    <h5 class="h1 text-center">Our Burgers</h5>
+    <ng-container *ngFor="let item of items">
+      <ng-container *ngIf="item.item_type =='food'">
+        <ng-container *ngIf="item.item_subtype =='burger'">
+          <div class="mycard">
+            <div class="mycard-img_link" href="#">
+              <img class="mycard-img" src="http://localhost:3000/images/{{item.photo_file}}" alt="Image Title" />
+            </div>
+            <div class="mycard-text">
+              <h1 class="mycard-title">{{item.name}}</h1>
+              <div class="mycard-subtitle small">
+              </div>
+              <div class="mycard-bar"></div>
+              <div class="mycard-preview-txt">{{item.description}}</div>
+              <ul class="mycard-tagbox">
+                <li class="tag-item">${{item.price}}</li>
+              </ul>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+
+<section class="dark">
+  <div class="container py-4">
+    <h5 class="h1 text-center" >Pasta</h5>
+    <ng-container *ngFor="let item of items">
+      <ng-container *ngIf="item.item_type =='food'">
+        <ng-container *ngIf="item.item_subtype =='pasta'">
+          <article class="mycard">
+            <div class="mycard-img_link" href="#">
+              <img class="mycard-img" src="http://localhost:3000/images/{{item.photo_file}}" alt="Image Title" />
+            </div>
+            <div class="mycard-text">
+              <h1 class="mycard-title orange">{{item.name}}</h1>
+              <div class="mycard-subtitle small">
+              </div>
+              <div class="mycard-bar"></div>
+              <div class="mycard-preview-txt">{{item.description}}</div>
+              <ul class="mycard-tagbox">
+                <li class="tag-item">${{item.price}} A Glass</li>
+                <li class="tag-item">Pitcher or Bottle Price Available Upon Request</li>
+              </ul>
+            </div>
+          </article>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+</section>

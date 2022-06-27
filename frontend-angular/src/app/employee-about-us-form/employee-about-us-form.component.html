@@ -1,0 +1,27 @@
+<app-employee-homepage></app-employee-homepage>
+<div container style="background-color: #F3EFF5" mx-auto class="d-flex p-6">
+  <form [formGroup]="updateAboutUs">
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="our_history">Our History:</label>
+        <input type="text" class ="form-control" placeholder="Enter Company History" formControlName="our_histoy" id="our_history">
+      </div>
+
+      <div class="form-group">
+        <label for="what_we_believe">What We Believe:</label>
+        <input type="text" class ="form-control" placeholder="Enter Company Beliefs" formControlName="what_we_believe" id="what_we_believe">
+      </div>
+
+      <div class="form-group">
+        <label for="our_commit">Our Commitment:</label>
+        <input type="text" class ="form-control" placeholder="Enter Company Commitments" formControlName="our_commit" id="our_commit">
+      </div>
+
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary" (click)="updateContact()">Update</button>
+  </form>
+</div>
+

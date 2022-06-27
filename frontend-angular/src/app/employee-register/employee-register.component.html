@@ -1,0 +1,28 @@
+<app-employee-homepage></app-employee-homepage>
+<div container style="background-color: #F3EFF5">
+  <form [formGroup]="employeeRegisterForm">
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" class ="form-control" placeholder="Enter Email Address" formControlName="email" id="email">
+    </div>
+
+    <div class="alert alert-danger" *ngIf="email?.invalid && email?.touched">
+      <div *ngIf="email?.errors?.['required']">A Name is Required</div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Password</label>
+      <input type="password" class="form-control" placeholder="Enter a Password" formControlName="password" id="password">
+    </div>
+
+    <div class="alert alert-danger" *ngIf="password?.invalid && password?.touched">
+      <div *ngIf="password?.errors?.['required']">Password is Required</div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary" (click)="register()" [disabled]="employeeRegisterForm.invalid">Register</button>
+
+  </form>
+</div>
+

@@ -1,0 +1,59 @@
+<div *ngFor="let review of reviews">
+
+      <div class="card border-light mb-3" style="max-width: 1200px; background-color: #0C0600">
+        <div class="row g-0">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Customer Name: {{review.name}}</h5>
+              <h4 class="card-title">Item Reviewed: {{review.item}}</h4>
+              <p class="card-text">{{review.review}}</p>
+              <div *ngIf="review.rating == 0">
+                <span class="blank">★</span>
+                <span class="blank">★</span>
+                <span class="blank">★</span>
+                <span class="blank">★</span>
+                <span class="blank">★</span>
+              </div>
+              <div *ngIf="review.rating == 1">
+                <span class="icon">★</span>
+                <span class="blank">★</span>
+                <span class="blank">★</span>
+                <span class="blank">★</span>
+                <span class="blank">★</span>
+              </div>
+              <div *ngIf="review.rating == 2">
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="blank">★</span>
+                <span class="blank">★</span>
+                <span class="blank">★</span>
+              </div>
+              <div *ngIf="review.rating == 3">
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="blank">★</span>
+                <span class="blank">★</span>
+              </div>
+              <div *ngIf="review.rating == 4">
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="blank">★</span>
+              </div>
+              <div *ngIf="review.rating == 5">
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+

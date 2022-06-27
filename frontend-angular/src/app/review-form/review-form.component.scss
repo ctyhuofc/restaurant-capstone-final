@@ -1,0 +1,107 @@
+body {
+  background-color:#020122 !important;
+}
+
+h1{
+  color: #F5FF90
+}
+
+body{color: #020122;overflow-x:
+  hidden;height: 100%;
+  /*background-image: url("https://i.imgur.com/GMmCQHC.png");*/
+  background-repeat: no-repeat;
+  background-size: 100% 100%}
+
+.card{padding: 30px 40px;
+    margin-top: 60px;
+  margin-bottom: 60px;
+  border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}
+
+.pink-text{
+  color: #F3EFF5
+}
+
+.form-control-label{
+  margin-bottom: 0
+}
+input, textarea, button{
+  padding: 8px 15px;
+  border-radius: 5px !important;
+  margin: 5px 0px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  font-size: 18px !important;
+  font-weight: 300
+}
+/*input:focus, textarea:focus{*/
+/*  -moz-box-shadow: none !important;*/
+/*  -webkit-box-shadow: none !important;*/
+/*  box-shadow: none !important;*/
+/*  border: 1px solid #00BCD4;*/
+/*  outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block :hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}*/
+
+.rating {
+  display: inline-block;
+  position: relative;
+  height: 25px;
+  line-height: 25px;
+  font-size: 25px;
+}
+
+.rating label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rating label:last-child {
+  position: static;
+}
+
+.rating label:nth-child(1) {
+  z-index: 5;
+}
+
+.rating label:nth-child(2) {
+  z-index: 4;
+}
+
+.rating label:nth-child(3) {
+  z-index: 3;
+}
+
+.rating label:nth-child(4) {
+  z-index: 2;
+}
+
+.rating label:nth-child(5) {
+  z-index: 1;
+}
+
+.rating label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rating label .icon {
+  float: left;
+  color: transparent;
+}
+
+.rating label:last-child .icon {
+  color: #000;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+  color: #FF9F1C;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+  color: #000;
+  text-shadow: 0 0 5px #09f;
+}

@@ -1,0 +1,52 @@
+
+<div class="list-group" *ngFor="let contact_info of contact_infos">
+  <a href="about-us" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">About Us</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1"></p>
+    <small>Learn About The Lancelet</small>
+  </a>
+  <a href="about-us" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Our Hours</h5>
+
+      <p class="mb-1"></p>
+    </div>
+    <p class="mb-1"></p>
+    <small>{{contact_info.hours}}</small>
+    <br>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Visit or Write to Us:</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1">{{contact_info.address}}</p>
+    <small>We'd love to hear From You</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Call Us</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Call Us at: {{contact_info.phone_number}}</p>
+<br>
+  </a>
+  <a href="mailto:{{contact_info.email}}?&subject=Lancelet Customer Question Or Feedback" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Email Us</h5>
+    </div>
+    <p class="mb-1">Click Here to email us</p>
+<br>
+  </a>
+  <a href="contact-us-form" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Fill out our Contact Form</h5>
+
+    </div>
+    <p class="mb-1"> Click here to fill out our contact Form</p>
+    <br>
+  </a>
+</div>

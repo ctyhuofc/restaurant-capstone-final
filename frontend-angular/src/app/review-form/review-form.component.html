@@ -1,0 +1,105 @@
+<div class="container-fluid px-1 py-5 mx-auto" style="background-color: #0C0600">
+  <div class="row d-flex justify-content-center">
+    <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+      <h1>Review The Lancelet</h1>
+      <p class="pink-text">We'd love to hear what you think about our Menu</p>
+      <div class="card" style="background-color: #F3EFF5">
+        <h5 class="text-center mb-4"></h5>
+        <form class="form-card" [formGroup]="addReviewForm" style="background-color: #F3EFF5">
+          <div class="row justify-content-between text-left">
+  <div class="mb-3">
+
+    <div *ngIf="alert" class="alert alert-warning alert-dismissible fade show" role="alert" style="background-color: #F5FF90">
+      <strong>Thank you for your review</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" class="form-control" placeholder="Enter your full name" formControlName="name" id="name">
+    </div>
+
+  <div class="alert alert-danger" *ngIf="name?.invalid && name?.touched">
+    <div *ngIf="name?.errors?.['required']">Your Name is Required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="text" class="form-control" placeholder="Enter Your Email Address" formControlName="email" id="email">
+  </div>
+
+  <div class="alert alert-danger" *ngIf="email?.invalid && email?.touched">
+    <div *ngIf="email?.errors?.['required']">Email is Required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="item">Item: </label>
+    <input type="text" class="form-control" placeholder="Which Item Would You Like To Review?" formControlName="item" id="item">
+  </div>
+
+  <div class="alert alert-danger" *ngIf="item?.invalid && item?.touched">
+    <div *ngIf="item?.errors?.['required']">Item is Required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="review">Review:</label>
+    <input type="textarea" class="form-control" placeholder="Enter the review" formControlName="review" id="review">
+  </div>
+
+  <div class="alert alert-danger" *ngIf="review?.invalid && review?.touched">
+    <div *ngIf="review?.errors?.['required']">review is Required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="rating">Rating:</label>
+    <br>
+    <div class="rating" id="rating">
+      <label>
+        <input type="radio" formControlName="rating" value="1" />
+        <span class="icon">★</span>
+      </label>
+      <label>
+        <input type="radio" formControlName="rating" value="2" />
+        <span class="icon">★</span>
+        <span class="icon">★</span>
+      </label>
+      <label>
+        <input type="radio" formControlName="rating" value="3" />
+        <span class="icon">★</span>
+        <span class="icon">★</span>
+        <span class="icon">★</span>
+      </label>
+      <label>
+        <input type="radio" formControlName="rating" value="4" />
+        <span class="icon">★</span>
+        <span class="icon">★</span>
+        <span class="icon">★</span>
+        <span class="icon">★</span>
+      </label>
+      <label>
+        <input type="radio" formControlName="rating" value="5" />
+        <span class="icon">★</span>
+        <span class="icon">★</span>
+        <span class="icon">★</span>
+        <span class="icon">★</span>
+        <span class="icon">★</span>
+      </label>
+    </div>
+  </div>
+    <div class="alert alert-danger" *ngIf="rating?.invalid && rating?.touched">
+      <div *ngIf="rating?.errors?.['required']">Rating is Required</div>
+</div>
+
+
+<br>
+
+  <button type="submit" class="btn btn-primary" (click)="add_review()" [disabled]="addReviewForm.invalid" style="background-color: #55828B">Submit</button>
+  </div>
+          </div>
+
+
+</form>
+</div>
+    </div>
+  </div>
+</div>

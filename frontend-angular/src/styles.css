@@ -1,0 +1,26 @@
+body{
+  background-image: url("http://localhost:3000/images/couple-banner.jpg") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0C0600;
+}
+
+.btn-primary{
+  background-color: #FF9F1C;
+  color: #0C0600;
+  border-color: #0C0600;
+}
+
+.btn-primary:hover{
+  background-color: #0C0600;
+  color: #FF9F1C;
+  border-color: #FF9F1C;
+}
+
+.btn-primary:disabled{
+  background-color: #020122;
+  color: #FF9F1C;
+  border-color: #FF9F1C;
+}
+
+

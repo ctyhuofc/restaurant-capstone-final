@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>The Lancelet Reviews</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card-title style="text-align: center">Reviews</ion-card-title>
+  <div *ngFor="let review of reviews">
+    <ion-card-header>
+      <ion-card-subtitle>{{review.name}}</ion-card-subtitle>
+      <ion-card-title>{{review.item}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{review.review}}
+    </ion-card-content>
+  </div>
+</ion-content>

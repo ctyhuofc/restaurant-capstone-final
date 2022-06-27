@@ -1,0 +1,15 @@
+<app-employee-homepage></app-employee-homepage>
+<div *ngFor="let contactForm of contactForms">
+
+  <div class="card border-light mb-6 col-12 text-center" style="background-color: #0C0600">
+    <div class="row g-0">
+      <div class="col-12">
+        <div class="card-body">
+          <h5 class="card-title">Customer Name: {{contactForm.full_name}}</h5>
+          <h4 class="card-title">Email: {{contactForm.email}}</h4>
+          <p class="card-text">Feedback: {{contactForm.comment}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
